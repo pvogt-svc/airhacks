@@ -2,6 +2,7 @@
 package com.airhacks.faema.coffee.boundary;
 
 import com.airhacks.faema.monitoring.boundary.Monitor;
+import com.airhacks.interceptor.monitoring.boundary.PerformanceSensor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Stateless;
@@ -14,7 +15,7 @@ import javax.interceptor.Interceptors;
  *
  * @author airhacks.com
  */
-@Interceptors(ThreadRenamer.class)
+@Interceptors(PerformanceSensor.class)
 @TransactionAttribute(TransactionAttributeType.NEVER)
 @Stateless
 public class CoffeeService {
