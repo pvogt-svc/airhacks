@@ -1,6 +1,7 @@
 
 package com.airhacks.faema.coffee.boundary;
 
+import com.airhacks.faema.logging.boundary.Audit;
 import javax.annotation.Resource;
 import javax.ejb.SessionContext;
 import javax.ejb.Singleton;
@@ -20,6 +21,9 @@ import javax.ws.rs.Path;
 public class CoffeesResource {
 
     @Inject
+    Audit audit;
+
+    @Inject
     CoffeeService service;
 
     @Resource
@@ -27,6 +31,7 @@ public class CoffeesResource {
 
     @GET
     public String all() {
+        audit.log(42, 18, "all coffeees");
         return this.service.all();
 
     }
