@@ -1,13 +1,13 @@
 
 package com.airhacks.faema.coffee.boundary;
 
-import javax.enterprise.context.RequestScoped;
+import javax.ejb.Stateless;
 
 /**
  *
  * @author airhacks.com
  */
-@RequestScoped
+@Stateless
 public class CoffeeService {
 
     public String all() {

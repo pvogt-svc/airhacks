@@ -1,7 +1,7 @@
 
 package com.airhacks.faema.coffee.boundary;
 
-import javax.enterprise.context.RequestScoped;
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,7 +10,7 @@ import javax.ws.rs.Path;
  *
  * @author airhacks.com
  */
-@RequestScoped
+@Stateless
 @Path("coffees")
 public class CoffeesResource {
 
