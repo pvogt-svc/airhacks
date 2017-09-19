@@ -3,6 +3,7 @@ package com.airhacks.faema.coffee.boundary;
 
 import com.airhacks.faema.monitoring.boundary.Monitor;
 import com.airhacks.interceptor.monitoring.boundary.PerformanceSensor;
+import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Stateless;
@@ -24,9 +25,14 @@ public class CoffeeService {
     Monitor monitor;
 
     public String all() {
+
         try {
             Thread.sleep(200);
-        } catch (InterruptedException ex) {
+            InputStream resourceAsStream = CoffeeService.class.getResourceAsStream("/something.txt");
+            while (resourceAsStream.read() != -1) {
+
+            }
+        } catch (Throwable ex) {
             Logger.getLogger(CoffeeService.class.getName()).log(Level.SEVERE, null, ex);
         }
         monitor.espressoDelivered();
