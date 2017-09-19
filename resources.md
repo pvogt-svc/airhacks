@@ -14,3 +14,6 @@ http://www.adam-bien.com/roller/abien/entry/one_liner_extracting_long_statistics
 
 https://github.com/AdamBien/perceptor
 https://github.com/AdamBien/ping
+http://www.adam-bien.com/roller/abien/entry/java_mission_control_development_pricing
+-XX:+UnlockCommercialFeatures -XX:+FlightRecorder
+http://www.hawkular.org
